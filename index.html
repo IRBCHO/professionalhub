@@ -3,66 +3,363 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Irene Cho | Cloud & IT Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Irene Cho | Cloud Engineer Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+      color: #2e2e2e;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1a3a5c, #2e75b6);
+      color: white;
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+
+    header img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.5);
+      margin-bottom: 18px;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    header p.tagline {
+      font-size: 1rem;
+      opacity: 0.88;
+      max-width: 520px;
+      margin: 0 auto 22px;
+      line-height: 1.6;
+    }
+
+    .header-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .header-links a {
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.55);
+      padding: 7px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+
+    .header-links a:hover { background: rgba(255,255,255,0.15); }
+
+    /* SECTIONS */
+    section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a3a5c;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #2e75b6;
+      padding-bottom: 8px;
+      margin-bottom: 28px;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.11);
+    }
+
+    .project-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+
+    .project-card p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-tag {
+      background: #e8f0fb;
+      color: #2e75b6;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .project-links a {
+      font-size: 0.82rem;
+      color: #2e75b6;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid #2e75b6;
+      padding: 5px 12px;
+      border-radius: 5px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .project-links a:hover {
+      background: #2e75b6;
+      color: white;
+    }
+
+    .badge-in-progress {
+      display: inline-block;
+      background: #fff3cd;
+      color: #856404;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+
+    /* CERTIFICATIONS */
+    .certs-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .cert-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 260px;
+      flex: 1;
+    }
+
+    .cert-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .cert-info h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1a3a5c;
+      margin-bottom: 3px;
+    }
+
+    .cert-info p {
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    .cert-info a {
+      font-size: 0.78rem;
+      color: #2e75b6;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cert-pending {
+      font-size: 0.75rem;
+      color: #856404;
+      background: #fff3cd;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.82rem;
+      color: #aaa;
+      border-top: 1px solid #e5e5e5;
+    }
+  </style>
 </head>
-
 <body>
-  <main class="page">
-    <section class="card">
-      <div class="profile">
-        <div class="avatar-wrap">
-          <img class="avatar" src="assets/profile.png" alt="Profile photo of Irene Cho" />
-        </div>
 
-        <div class="profile-text">
-          <h1>Irene Cho</h1>
-          <p class="headline">Cloud & IT Portfolio</p>
+  <!-- HEADER -->
+  <header>
+    <img src="https://irbcho.github.io/linkhub/assets/profile.png" alt="Irene Cho" />
+    <h1>Irene Cho</h1>
+    <p class="tagline">
+      Cloud Engineer building on AWS with a focus on serverless architecture, AI integration, and cloud migration. AWS Certified. Pursuing Solutions Architect Associate.
+    </p>
+    <div class="header-links">
+      <a href="https://www.linkedin.com/in/irene-b-c" target="_blank">LinkedIn</a>
+      <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+      <a href="https://www.credly.com/users/irenecho" target="_blank">Credly</a>
+      <a href="https://irbcho.github.io/organicgoods/" target="_blank">OrganicGoods Project</a>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>AI Resume Analyzer <span class="badge-in-progress">In Progress</span></h3>
+        <p>A serverless cloud application that analyzes resumes using AI and returns feedback to help job seekers improve their applications. Built to apply AWS Well-Architected Framework principles across a real, end-to-end cloud architecture.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Amazon Bedrock</span>
+          <span class="tech-tag">AWS Lambda</span>
+          <span class="tech-tag">API Gateway</span>
+          <span class="tech-tag">Amazon S3</span>
+          <span class="tech-tag">CloudWatch</span>
+          <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
         </div>
       </div>
 
-      <p class="about">
-        Hi, I’m Irene Cho. I started my tech journey through cloud computing and quickly became interested in how systems, automation, and data work together. I’m now building projects in AWS, DevOps, data, and AI to keep growing my skills.
-      </p>
-
-      <div class="links">
-        <a href="https://www.linkedin.com/in/irene-c-063860361" target="_blank">
-          <img src="assets/linkedin.png" alt="" class="link-icon" />
-          <div>
-            <span>LinkedIn</span>
-            <small>Professional profile</small>
-          </div>
-        </a>
-
-        <a href="https://github.com/IRBCHO" target="_blank">
-          <img src="assets/github.png" alt="" class="link-icon" />
-          <div>
-            <span>GitHub</span>
-            <small>Projects and code</small>
-          </div>
-        </a>
-
-        <a href="https://www.credly.com/users/irenecho" target="_blank">
-          <img src="assets/credly.png" alt="" class="link-icon" />
-          <div>
-            <span>Credly</span>
-            <small>Certifications and badges</small>
-          </div>
-        </a>
-
-        <a href="https://irbcho.github.io/organicgoods/" target="_blank">
-          <img src="assets/logo4.png" alt="" class="link-icon organic-icon" />
-          <div>
-            <span>OrganicGoods</span>
-            <small>Front-end e-commerce website project</small>
-          </div>
-        </a>
+      <div class="project-card">
+        <h3>AWS Cloud Migration Lab</h3>
+        <p>Simulated a real-world database migration from on-premises infrastructure to Amazon RDS using AWS DMS. Documented the full process including schema setup, data validation, testing, and troubleshooting to produce a repeatable migration runbook.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Amazon RDS</span>
+          <span class="tech-tag">AWS DMS</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">AWS IAM</span>
+          <span class="tech-tag">VPC</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+        </div>
       </div>
 
-      <p class="footer">
-  Professional Hub · Designed & Built by Irene
-</p>
-    </section>
-  </main>
+      <div class="project-card">
+        <h3>Meal Planner &amp; Grocery Generator</h3>
+        <p>A Python desktop application that solves the problem of meal planning and grocery budgeting by generating 7-day meal plans, calculating nutrition and cost automatically, and producing a grocery list — all from a single interface.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Tkinter</span>
+          <span class="tech-tag">REST API</span>
+          <span class="tech-tag">JSON</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/IRBCHO/Meal-Planner-Grocery-Generator" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>OrganicGoods E-Commerce Site</h3>
+        <p>A fully designed and built front-end e-commerce website for an organic grocery store, including product pages, shopping cart, and responsive layout. Demonstrates end-to-end web development skills from design to deployment.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">GitHub Pages</span>
+        </div>
+        <div class="project-links">
+          <a href="https://irbcho.github.io/organicgoods/" target="_blank">Live Demo</a>
+          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section style="padding-top: 0;">
+    <h2>Certifications</h2>
+    <div class="certs-grid">
+
+      <div class="cert-card">
+        <img class="cert-logo"
+          src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+          alt="AWS Cloud Practitioner badge" />
+        <div class="cert-info">
+          <h4>AWS Certified Cloud Practitioner</h4>
+          <p>Amazon Web Services &nbsp;·&nbsp; Issued Mar 2023</p>
+          <a href="https://www.credly.com/users/irenecho" target="_blank">View credential</a>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <img class="cert-logo"
+          src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de57f54a0cf3/image.png"
+          alt="AWS AI Practitioner badge" />
+        <div class="cert-info">
+          <h4>AWS AI Practitioner</h4>
+          <p>Amazon Web Services</p>
+          <span class="cert-pending">Expected June 2026</span>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <img class="cert-logo"
+          src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+          alt="AWS Solutions Architect Associate badge" />
+        <div class="cert-info">
+          <h4>AWS Solutions Architect Associate</h4>
+          <p>Amazon Web Services</p>
+          <span class="cert-pending">Expected August 2026</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Designed &amp; Built by Irene Cho &nbsp;·&nbsp; Cloud &amp; IT Portfolio
+  </footer>
+
 </body>
 </html>
