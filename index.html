@@ -1,654 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Irene Cho | Cloud & DevOps Engineer</title>
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Irene Cho | Cloud & DevOps Engineer</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    :root {
-      --navy: #0d1f3c;
-      --blue: #1a4a8a;
-      --accent: #2e75b6;
-      --light-blue: #e8f0fb;
-      --text: #1e1e1e;
-      --muted: #5a6a7e;
-      --border: #dde4ed;
-      --bg: #f5f7fa;
-      --white: #ffffff;
-      --green: #1a7a4a;
-      --green-bg: #e8f8f0;
-    }
+:root {
+--navy: #0d1f3c;
+--blue: #1a4a8a;
+--accent: #2e75b6;
+--light-blue: #e8f0fb;
+--text: #1e1e1e;
+--muted: #5a6a7e;
+--border: #dde4ed;
+--bg: #f5f7fa;
+--white: #ffffff;
+--green: #1a7a4a;
+--green-bg: #e8f8f0;
+}
 
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+body {
+font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+}
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, #0d1f3c 0%, #1a4a8a 65%, #2e75b6 100%);
-      color: white;
-      padding: 72px 24px 64px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+/* ── HERO ── */
+.hero {
+background: linear-gradient(135deg, #0d1f3c 0%, #1a4a8a 65%, #2e75b6 100%);
+color: white;
+padding: 72px 24px 64px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
 
-    .hero::before, .hero::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.04);
-    }
-    .hero::before { width: 360px; height: 360px; top: -100px; right: -100px; }
-    .hero::after  { width: 280px; height: 280px; bottom: -80px; left: -80px; }
+.hero::before, .hero::after {
+content: '';
+position: absolute;
+border-radius: 50%;
+background: rgba(255,255,255,0.04);
+}
+.hero::before { width: 360px; height: 360px; top: -100px; right: -100px; }
+.hero::after { width: 280px; height: 280px; bottom: -80px; left: -80px; }
 
-    .hero img {
-      width: 110px; height: 110px;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.4);
-      object-fit: cover;
-      margin-bottom: 18px;
-      position: relative; z-index: 1;
-    }
+.hero img {
+width: 110px; height: 110px;
+border-radius: 50%;
+border: 3px solid rgba(255,255,255,0.4);
+object-fit: cover;
+margin-bottom: 18px;
+position: relative; z-index: 1;
+}
 
-    .hero h1 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      margin-bottom: 8px;
-      position: relative; z-index: 1;
-    }
+.hero h1 {
+font-size: 2.1rem;
+font-weight: 700;
+letter-spacing: -0.3px;
+margin-bottom: 8px;
+position: relative; z-index: 1;
+}
 
-    .hero .subtitle {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 22px;
-      position: relative; z-index: 1;
-    }
+.hero .subtitle {
+font-size: 0.95rem;
+color: rgba(255,255,255,0.75);
+margin-bottom: 22px;
+position: relative; z-index: 1;
+}
 
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      margin-bottom: 26px;
-      position: relative; z-index: 1;
-    }
+.status-pill {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: rgba(255,255,255,0.12);
+border: 1px solid rgba(255,255,255,0.25);
+padding: 5px 14px;
+border-radius: 20px;
+font-size: 0.8rem;
+margin-bottom: 26px;
+position: relative; z-index: 1;
+}
 
-    .status-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: #4ade80;
-      animation: pulse 2s infinite;
-    }
+.status-dot {
+width: 7px; height: 7px;
+border-radius: 50%;
+background: #4ade80;
+animation: pulse 2s infinite;
+}
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
+@keyframes pulse {
+0%, 100% { opacity: 1; }
+50% { opacity: 0.4; }
+}
 
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      position: relative; z-index: 1;
-    }
+.hero-links {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+position: relative; z-index: 1;
+}
 
-    .hero-links a {
-      color: white;
-      border: 1px solid rgba(255,255,255,0.4);
-      padding: 8px 20px;
-      border-radius: 22px;
-      font-size: 0.84rem;
-      font-weight: 500;
-      transition: background 0.2s;
-      text-decoration: none;
-    }
-    .hero-links a:hover { background: rgba(255,255,255,0.15); text-decoration: none; }
+.hero-links a {
+color: white;
+border: 1px solid rgba(255,255,255,0.4);
+padding: 8px 20px;
+border-radius: 22px;
+font-size: 0.84rem;
+font-weight: 500;
+transition: background 0.2s;
+text-decoration: none;
+}
+.hero-links a:hover { background: rgba(255,255,255,0.15); text-decoration: none; }
 
-    /* ── ABOUT ── */
-    .about-wrap {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
+/* ── ABOUT ── */
+.about-wrap {
+background: var(--white);
+border-bottom: 1px solid var(--border);
+}
 
-    .about-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 54px 24px 40px;
-    }
+.about-inner {
+max-width: 780px;
+margin: 0 auto;
+padding: 54px 24px 40px;
+}
 
-    .about-inner p {
-      font-size: 1rem;
-      line-height: 1.85;
-      color: #333;
-      margin-bottom: 16px;
-    }
-    .about-inner p:last-child { margin-bottom: 0; }
+.about-inner p {
+font-size: 1rem;
+line-height: 1.85;
+color: #333;
+margin-bottom: 16px;
+}
+.about-inner p:last-child { margin-bottom: 0; }
 
-    .hl { color: var(--blue); font-weight: 600; }
+.hl { color: var(--blue); font-weight: 600; }
 
-    .now-strip {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 24px 48px;
-      background: var(--white);
-    }
+.now-strip {
+max-width: 780px;
+margin: 0 auto;
+padding: 0 24px 48px;
+background: var(--white);
+}
 
-    .now-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.3px;
-      color: #999;
-      margin-bottom: 12px;
-    }
+.now-label {
+font-size: 0.75rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1.3px;
+color: #999;
+margin-bottom: 12px;
+}
 
-    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
-    .now-tag {
-      background: var(--light-blue);
-      color: var(--blue);
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
+.now-tag {
+background: var(--light-blue);
+color: var(--blue);
+padding: 5px 14px;
+border-radius: 20px;
+font-size: 0.8rem;
+font-weight: 600;
+}
 
-    /* ── SECTION WRAPPER ── */
-    .section {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 52px 24px;
-    }
+/* ── SECTION WRAPPER ── */
+.section {
+max-width: 960px;
+margin: 0 auto;
+padding: 52px 24px;
+}
 
-    .section-title {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-      color: var(--accent);
-      border-left: 3px solid var(--accent);
-      padding-left: 12px;
-      margin-bottom: 30px;
-    }
+.section-title {
+font-size: 0.78rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1.4px;
+color: var(--accent);
+border-left: 3px solid var(--accent);
+padding-left: 12px;
+margin-bottom: 30px;
+}
 
-    /* ── SKILLS ── */
-    .skills-bg { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+/* ── SKILLS ── */
+.skills-bg { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 14px;
-    }
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 14px;
+}
 
-    .skill-group {
-      background: var(--bg);
-      border-radius: 10px;
-      padding: 16px 18px;
-      border: 1px solid var(--border);
-    }
+.skill-group {
+background: var(--bg);
+border-radius: 10px;
+padding: 16px 18px;
+border: 1px solid var(--border);
+}
 
-    .skill-group h4 {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--blue);
-      margin-bottom: 10px;
-    }
+.skill-group h4 {
+font-size: 0.78rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+color: var(--blue);
+margin-bottom: 10px;
+}
 
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
-    .skill-tag {
-      background: var(--white);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 0.76rem;
-      padding: 3px 10px;
-      border-radius: 10px;
-    }
+.skill-tag {
+background: var(--white);
+border: 1px solid var(--border);
+color: var(--text);
+font-size: 0.76rem;
+padding: 3px 10px;
+border-radius: 10px;
+}
 
-    /* ── PROJECTS ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
+/* ── PROJECTS ── */
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 20px;
+}
 
-    .project-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-      border-top: 3px solid var(--accent);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+.project-card {
+background: var(--white);
+border-radius: 12px;
+padding: 24px;
+box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+border-top: 3px solid var(--accent);
+display: flex;
+flex-direction: column;
+gap: 12px;
+transition: transform 0.2s, box-shadow 0.2s;
+}
 
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
+.project-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
 
-    .project-card h3 {
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+.project-card h3 {
+font-size: 0.98rem;
+font-weight: 700;
+color: var(--navy);
+display: flex;
+align-items: center;
+gap: 6px;
+}
 
-    .live-badge {
-      font-size: 0.67rem;
-      font-weight: 700;
-      background: var(--green-bg);
-      color: var(--green);
-      padding: 2px 8px;
-      border-radius: 10px;
-    }
+.live-badge {
+font-size: 0.67rem;
+font-weight: 700;
+background: var(--green-bg);
+color: var(--green);
+padding: 2px 8px;
+border-radius: 10px;
+}
 
-    .project-card p {
-      font-size: 0.86rem;
-      line-height: 1.65;
-      color: var(--muted);
-      flex-grow: 1;
-    }
+.project-card p {
+font-size: 0.86rem;
+line-height: 1.65;
+color: var(--muted);
+flex-grow: 1;
+}
 
-    .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; }
+.tech-stack { display: flex; flex-wrap: wrap; gap: 6px; }
 
-    .tech-tag {
-      background: var(--light-blue);
-      color: var(--blue);
-      font-size: 0.71rem;
-      padding: 3px 10px;
-      border-radius: 10px;
-      font-weight: 600;
-    }
+.tech-tag {
+background: var(--light-blue);
+color: var(--blue);
+font-size: 0.71rem;
+padding: 3px 10px;
+border-radius: 10px;
+font-weight: 600;
+}
 
-    .project-links { display: flex; gap: 8px; margin-top: 2px; }
+.project-links { display: flex; gap: 8px; margin-top: 2px; }
 
-    .project-links a {
-      font-size: 0.8rem;
-      color: var(--accent);
-      font-weight: 600;
-      border: 1px solid var(--accent);
-      padding: 5px 14px;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-      text-decoration: none;
-    }
-    .project-links a:hover { background: var(--accent); color: white; text-decoration: none; }
+.project-links a {
+font-size: 0.8rem;
+color: var(--accent);
+font-weight: 600;
+border: 1px solid var(--accent);
+padding: 5px 14px;
+border-radius: 6px;
+transition: background 0.2s, color 0.2s;
+text-decoration: none;
+}
+.project-links a:hover { background: var(--accent); color: white; text-decoration: none; }
 
-    /* ── CERTIFICATIONS ── */
-    .certs-bg { background: var(--white); border-top: 1px solid var(--border); }
+/* ── CERTIFICATIONS ── */
+.certs-bg { background: var(--white); border-top: 1px solid var(--border); }
 
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
+.certs-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 16px;
+}
 
-    .cert-card {
-      background: var(--bg);
-      border-radius: 12px;
-      padding: 20px;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
+.cert-card {
+background: var(--bg);
+border-radius: 12px;
+padding: 20px;
+border: 1px solid var(--border);
+display: flex;
+align-items: center;
+gap: 16px;
+}
 
-    .cert-logo {
-      width: 52px; height: 52px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
+.cert-logo {
+width: 52px; height: 52px;
+object-fit: contain;
+flex-shrink: 0;
+}
 
-    .cert-info h4 {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 3px;
-    }
+.cert-info h4 {
+font-size: 0.88rem;
+font-weight: 700;
+color: var(--navy);
+margin-bottom: 3px;
+}
 
-    .cert-info p { font-size: 0.76rem; color: var(--muted); }
+.cert-info p { font-size: 0.76rem; color: var(--muted); }
 
-    .cert-info a {
-      font-size: 0.74rem;
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .cert-info a:hover { text-decoration: underline; }
+.cert-info a {
+font-size: 0.74rem;
+color: var(--accent);
+font-weight: 600;
+text-decoration: none;
+}
+.cert-info a:hover { text-decoration: underline; }
 
-    .cert-pending {
-      display: inline-block;
-      margin-top: 4px;
-      font-size: 0.71rem;
-      font-weight: 700;
-      background: #fff3cd;
-      color: #856404;
-      padding: 2px 8px;
-      border-radius: 10px;
-    }
+.cert-pending {
+display: inline-block;
+margin-top: 4px;
+font-size: 0.71rem;
+font-weight: 700;
+background: #fff3cd;
+color: #856404;
+padding: 2px 8px;
+border-radius: 10px;
+}
 
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 32px 20px;
-      font-size: 0.8rem;
-      color: #aaa;
-      border-top: 1px solid var(--border);
-      background: var(--white);
-    }
-    footer a { color: var(--accent); }
+/* ── FOOTER ── */
+footer {
+text-align: center;
+padding: 32px 20px;
+font-size: 0.8rem;
+color: #aaa;
+border-top: 1px solid var(--border);
+background: var(--white);
+}
+footer a { color: var(--accent); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.6rem; }
-      .projects-grid, .certs-grid, .skills-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+.hero h1 { font-size: 1.6rem; }
+.projects-grid, .certs-grid, .skills-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <img src="https://irbcho.github.io/professionalhub/assets/profile.png" alt="Irene Cho" />
-    <h1>Irene Cho</h1>
-    <p class="subtitle">Cloud &amp; DevOps Engineer &nbsp;·&nbsp; AWS Certified &nbsp;·&nbsp; Northern Virginia</p>
-    <div class="status-pill">
-      <span class="status-dot"></span>
-      Open to Work
-    </div>
-    <div class="hero-links">
-      <a href="https://www.linkedin.com/in/irene-b-c" target="_blank">LinkedIn</a>
-      <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
-      <a href="https://www.credly.com/users/irenecho" target="_blank">Credly</a>
-    </div>
-  </div>
+<!-- HERO -->
+<div class="hero">
+<img src="https://irbcho.github.io/professionalhub/assets/profile.png" alt="Irene Cho" />
+<h1>Irene Cho</h1>
+<p class="subtitle">Cloud &amp; DevOps Engineer &nbsp;·&nbsp; AWS Certified &nbsp;·&nbsp; Northern Virginia</p>
+<div class="status-pill">
+<span class="status-dot"></span>
+Open to Work
+</div>
+<div class="hero-links">
+<a href="https://www.linkedin.com/in/irene-b-c" target="_blank">LinkedIn</a>
+<a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+<a href="https://www.credly.com/users/irenecho" target="_blank">Credly</a>
+</div>
+</div>
 
-  <!-- ABOUT -->
-  <div class="about-wrap">
-    <div class="about-inner">
-      <p>
-        My mission is to build reliable cloud infrastructure that solves real problems. With
-        <span class="hl">hands-on AWS experience</span> and a deep curiosity for how cloud systems work,
-        I am focused on growing into a Cloud or DevOps Engineer role where I can contribute from day one.
-      </p>
-      <p>
-        My background is a little unconventional. I ran
-        <span class="hl">remote IT operations for a family business across US and Thailand time zones</span>
-        for six years before formally studying cloud. That experience gave me a calm under pressure and a
-        get-it-done mindset that I now bring to real cloud work.
-      </p>
-      <p>
-        I graduated <span class="hl">Summa Cum Laude with a 4.0 GPA</span> from NOVA's Cloud Computing program,
-        hold an AWS Cloud Practitioner certification, and am working toward Solutions Architect Associate
-        and AWS AI Practitioner. Bilingual in English and Thai.
-      </p>
-    </div>
-    <div class="now-strip">
-      <div class="now-label">Currently</div>
-      <div class="tag-row">
-        <span class="now-tag">AWS Solutions Architect Associate</span>
-        <span class="now-tag">AWS AI Practitioner</span>
-        <span class="now-tag">Learning DevOps</span>
-        <span class="now-tag">Building on AWS</span>
-        <span class="now-tag">Open to Cloud &amp; DevOps Roles</span>
-      </div>
-    </div>
-  </div>
+<!-- ABOUT -->
+<div class="about-wrap">
+<div class="about-inner">
+<p>
+My mission is to build reliable cloud infrastructure that solves real problems. With
+<span class="hl">hands-on AWS experience</span> and a deep curiosity for how cloud systems work,
+I am focused on growing into a Cloud or DevOps Engineer role where I can contribute from day one.
+</p>
+<p>
+My background is a little unconventional. I ran
+<span class="hl">remote IT operations for a family business across US and Thailand time zones</span>
+for six years before formally studying cloud. That experience gave me a calm under pressure and a
+get-it-done mindset that I now bring to real cloud work.
+</p>
+<p>
+I graduated <span class="hl">Summa Cum Laude with a 4.0 GPA</span> from NOVA's Cloud Computing program,
+hold an AWS Cloud Practitioner certification, and am working toward Solutions Architect Associate
+and AWS AI Practitioner. Bilingual in English and Thai.
+</p>
+</div>
+<div class="now-strip">
+<div class="now-label">Currently</div>
+<div class="tag-row">
+<span class="now-tag">AWS Solutions Architect Associate</span>
+<span class="now-tag">AWS AI Practitioner</span>
+<span class="now-tag">Learning DevOps</span>
+<span class="now-tag">Building on AWS</span>
+<span class="now-tag">Open to Cloud &amp; DevOps Roles</span>
+</div>
+</div>
+</div>
 
-  <!-- SKILLS -->
-  <div class="skills-bg">
-    <div class="section">
-      <div class="section-title">Technical Skills</div>
-      <div class="skills-grid">
+<!-- SKILLS -->
+<div class="skills-bg">
+<div class="section">
+<div class="section-title">Technical Skills</div>
+<div class="skills-grid">
 
-        <div class="skill-group">
-          <h4>Cloud Infrastructure</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">AWS EC2</span>
-            <span class="skill-tag">S3</span>
-            <span class="skill-tag">RDS</span>
-            <span class="skill-tag">Lambda</span>
-            <span class="skill-tag">API Gateway</span>
-            <span class="skill-tag">IAM</span>
-            <span class="skill-tag">VPC</span>
-            <span class="skill-tag">CloudWatch</span>
-            <span class="skill-tag">Route 53</span>
-            <span class="skill-tag">Auto Scaling</span>
-            <span class="skill-tag">Amazon Bedrock</span>
-          </div>
-        </div>
+<div class="skill-group">
+<h4>Cloud Infrastructure</h4>
+<div class="skill-tags">
+<span class="skill-tag">AWS EC2</span>
+<span class="skill-tag">S3</span>
+<span class="skill-tag">RDS</span>
+<span class="skill-tag">Lambda</span>
+<span class="skill-tag">API Gateway</span>
+<span class="skill-tag">IAM</span>
+<span class="skill-tag">VPC</span>
+<span class="skill-tag">CloudWatch</span>
+<span class="skill-tag">Route 53</span>
+<span class="skill-tag">Auto Scaling</span>
+<span class="skill-tag">Amazon Bedrock</span>
+</div>
+</div>
 
-        <div class="skill-group">
-          <h4>DevOps &amp; Automation</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Bash</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Infrastructure as Code</span>
-          </div>
-        </div>
+<div class="skill-group">
+<h4>DevOps &amp; Automation</h4>
+<div class="skill-tags">
+<span class="skill-tag">Docker</span>
+<span class="skill-tag">GitHub Actions</span>
+<span class="skill-tag">CI/CD</span>
+<span class="skill-tag">Bash</span>
+<span class="skill-tag">Git</span>
+<span class="skill-tag">Infrastructure as Code</span>
+</div>
+</div>
 
-        <div class="skill-group">
-          <h4>Networking &amp; Security</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">TCP/IP</span>
-            <span class="skill-tag">DNS</span>
-            <span class="skill-tag">VPN</span>
-            <span class="skill-tag">SSL/TLS</span>
-            <span class="skill-tag">Firewalls</span>
-            <span class="skill-tag">AWS WAF</span>
-            <span class="skill-tag">Security Groups</span>
-          </div>
-        </div>
+<div class="skill-group">
+<h4>Networking &amp; Security</h4>
+<div class="skill-tags">
+<span class="skill-tag">TCP/IP</span>
+<span class="skill-tag">DNS</span>
+<span class="skill-tag">VPN</span>
+<span class="skill-tag">SSL/TLS</span>
+<span class="skill-tag">Firewalls</span>
+<span class="skill-tag">AWS WAF</span>
+<span class="skill-tag">Security Groups</span>
+</div>
+</div>
 
-        <div class="skill-group">
-          <h4>OS &amp; Scripting</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Linux (Ubuntu/CentOS)</span>
-            <span class="skill-tag">Windows Server</span>
-            <span class="skill-tag">Nginx</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">REST APIs</span>
-          </div>
-        </div>
+<div class="skill-group">
+<h4>OS &amp; Scripting</h4>
+<div class="skill-tags">
+<span class="skill-tag">Linux (Ubuntu/CentOS)</span>
+<span class="skill-tag">Windows Server</span>
+<span class="skill-tag">Nginx</span>
+<span class="skill-tag">Python</span>
+<span class="skill-tag">SQL</span>
+<span class="skill-tag">REST APIs</span>
+</div>
+</div>
 
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 
-  <!-- PROJECTS -->
-  <div class="section">
-    <div class="section-title">Projects</div>
-    <div class="projects-grid">
+<!-- PROJECTS -->
+<div class="section">
+<div class="section-title">Projects</div>
+<div class="projects-grid">
 
-      <div class="project-card">
-        <h3>AI Resume Analyzer <span class="live-badge">Live</span></h3>
-        <p>Serverless application that analyzes resumes against job descriptions using Amazon Bedrock and returns a match score, strengths, gaps, and improvement suggestions. Architected and deployed end-to-end on AWS using Well-Architected Framework principles.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Amazon Bedrock</span>
-          <span class="tech-tag">Lambda</span>
-          <span class="tech-tag">API Gateway</span>
-          <span class="tech-tag">S3</span>
-          <span class="tech-tag">CloudWatch</span>
-          <span class="tech-tag">Python</span>
-        </div>
-        <div class="project-links">
-          <a href="https://irbcho.github.io/AI-Resume-Analyzer/" target="_blank">Live Demo</a>
-          <a href="https://github.com/IRBCHO/AI-Resume-Analyzer" target="_blank">GitHub</a>
-        </div>
-      </div>
+<div class="project-card">
+<h3>AI Resume Analyzer <span class="live-badge">Live</span></h3>
+<p>A serverless app that analyzes resumes against job descriptions using Amazon Bedrock and returns a match score, strengths, gaps, and suggestions for improvement. Built and deployed on AWS with the Well-Architected Framework as a guide.</p>
+<div class="tech-stack">
+<span class="tech-tag">Amazon Bedrock</span>
+<span class="tech-tag">Lambda</span>
+<span class="tech-tag">API Gateway</span>
+<span class="tech-tag">S3</span>
+<span class="tech-tag">CloudWatch</span>
+<span class="tech-tag">Python</span>
+</div>
+<div class="project-links">
+<a href="https://irbcho.github.io/AI-Resume-Analyzer/" target="_blank">Live Demo</a>
+<a href="https://github.com/IRBCHO/AI-Resume-Analyzer" target="_blank">GitHub</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <h3>Database Migration to AWS RDS</h3>
-        <p>Led a team database migration project from on-premises to Amazon RDS using AWS DMS. Applied the AWS Well-Architected Framework and 7 R's migration strategy. Documented the full process including validation testing and a troubleshooting runbook.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">AWS DMS</span>
-          <span class="tech-tag">Amazon RDS</span>
-          <span class="tech-tag">EC2</span>
-          <span class="tech-tag">IAM</span>
-          <span class="tech-tag">KMS</span>
-          <span class="tech-tag">Auto Scaling</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
-        </div>
-      </div>
+<div class="project-card">
+<h3>Database Migration to AWS RDS</h3>
+<p>Led a team database migration from on-premises to Amazon RDS using AWS DMS, following the 7 R's migration strategy. Documented the whole process, including validation testing and a troubleshooting runbook.</p>
+<div class="tech-stack">
+<span class="tech-tag">AWS DMS</span>
+<span class="tech-tag">Amazon RDS</span>
+<span class="tech-tag">EC2</span>
+<span class="tech-tag">IAM</span>
+<span class="tech-tag">KMS</span>
+<span class="tech-tag">Auto Scaling</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <h3>EC2 Linux Web Server</h3>
-        <p>Provisioned and configured an EC2 Linux instance via CLI from scratch. Set up SSH access, security groups, and IAM permissions. Deployed an Nginx web server with no GUI tools.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">EC2</span>
-          <span class="tech-tag">Linux</span>
-          <span class="tech-tag">Nginx</span>
-          <span class="tech-tag">Security Groups</span>
-          <span class="tech-tag">IAM</span>
-          <span class="tech-tag">SSH</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/IRBCHO/aws-EC2-web-server" target="_blank">GitHub</a>
-        </div>
-      </div>
+<div class="project-card">
+<h3>EC2 Linux Web Server</h3>
+<p>Provisioned and configured an EC2 Linux instance via CLI from scratch, set up SSH access, security groups, and IAM permissions, then deployed an Nginx web server with no GUI tools.</p>
+<div class="tech-stack">
+<span class="tech-tag">EC2</span>
+<span class="tech-tag">Linux</span>
+<span class="tech-tag">Nginx</span>
+<span class="tech-tag">Security Groups</span>
+<span class="tech-tag">IAM</span>
+<span class="tech-tag">SSH</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/IRBCHO/aws-EC2-web-server" target="_blank">GitHub</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <h3>Meal Planner &amp; Grocery Generator</h3>
-        <p>Python class project that generates 7-day meal plans, calculates nutrition and cost automatically, and produces a grocery list from a single interface using real-time API data.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Tkinter</span>
-          <span class="tech-tag">REST API</span>
-          <span class="tech-tag">JSON</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/IRBCHO/Meal-Planner-Grocery-Generator" target="_blank">GitHub</a>
-        </div>
-      </div>
+<div class="project-card">
+<h3>Meal Planner &amp; Grocery Generator</h3>
+<p>Python class project that generates 7-day meal plans, calculates nutrition and cost automatically, and produces a grocery list from a single interface using real-time API data.</p>
+<div class="tech-stack">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Tkinter</span>
+<span class="tech-tag">REST API</span>
+<span class="tech-tag">JSON</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/IRBCHO/Meal-Planner-Grocery-Generator" target="_blank">GitHub</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <h3>OrganicGoods E-Commerce Site <span class="live-badge">Live</span></h3>
-        <p>Webpage design class project — a fully designed front-end e-commerce website for an organic grocery store with product pages, shopping cart, and responsive layout built from scratch.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">HTML</span>
-          <span class="tech-tag">CSS</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">GitHub Pages</span>
-        </div>
-        <div class="project-links">
-          <a href="https://irbcho.github.io/organicgoods/" target="_blank">Live Demo</a>
-          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
-        </div>
-      </div>
+<div class="project-card">
+<h3>OrganicGoods E-Commerce Site <span class="live-badge">Live</span></h3>
+<p>Webpage design class project: a fully designed front-end e-commerce website for an organic grocery store, with product pages, a shopping cart, and a responsive layout built from scratch.</p>
+<div class="tech-stack">
+<span class="tech-tag">HTML</span>
+<span class="tech-tag">CSS</span>
+<span class="tech-tag">JavaScript</span>
+<span class="tech-tag">GitHub Pages</span>
+</div>
+<div class="project-links">
+<a href="https://irbcho.github.io/organicgoods/" target="_blank">Live Demo</a>
+<a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <h3>CI/CD Pipeline</h3>
-        <p>Dockerizing the AI Resume Analyzer and building a GitHub Actions pipeline that automatically builds, tests, and deploys to AWS ECS on every code push. Demonstrates end-to-end DevOps automation.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Docker</span>
-          <span class="tech-tag">GitHub Actions</span>
-          <span class="tech-tag">AWS ECR</span>
-          <span class="tech-tag">AWS ECS</span>
-          <span class="tech-tag">CI/CD</span>
-          <span class="tech-tag">Automation</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
-        </div>
-      </div>
+<div class="project-card">
+<h3>Automated Monitoring &amp; Alerting</h3>
+<p>Set up CloudWatch alarms and SNS notifications to track EC2 health and resource usage, paired with a Bash script that runs scheduled checks and flags problems before they turn into downtime.</p>
+<div class="tech-stack">
+<span class="tech-tag">CloudWatch</span>
+<span class="tech-tag">SNS</span>
+<span class="tech-tag">EC2</span>
+<span class="tech-tag">Bash</span>
+<span class="tech-tag">Automation</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <h3>Infrastructure as Code with Terraform</h3>
-        <p>Writing Terraform code that provisions a full AWS environment — VPC, subnets, security groups, EC2, and RDS — from scratch with a single command. Version-controlled infrastructure ready for any deployment.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Terraform</span>
-          <span class="tech-tag">AWS VPC</span>
-          <span class="tech-tag">EC2</span>
-          <span class="tech-tag">RDS</span>
-          <span class="tech-tag">Security Groups</span>
-          <span class="tech-tag">IaC</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
-        </div>
-      </div>
+<div class="project-card">
+<h3>Infrastructure as Code with Terraform</h3>
+<p>Writing Terraform code that provisions a full AWS environment (VPC, subnets, security groups, EC2, and RDS) from a single command. Version-controlled infrastructure, ready for any deployment.</p>
+<div class="tech-stack">
+<span class="tech-tag">Terraform</span>
+<span class="tech-tag">AWS VPC</span>
+<span class="tech-tag">EC2</span>
+<span class="tech-tag">RDS</span>
+<span class="tech-tag">Security Groups</span>
+<span class="tech-tag">IaC</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+</div>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 
-  <!-- CERTIFICATIONS -->
-  <div class="certs-bg">
-    <div class="section">
-      <div class="section-title">Certifications</div>
-      <div class="certs-grid">
+<!-- CERTIFICATIONS -->
+<div class="certs-bg">
+<div class="section">
+<div class="section-title">Certifications</div>
+<div class="certs-grid">
 
-        <div class="cert-card">
-          <img class="cert-logo"
-            src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
-            alt="AWS Cloud Practitioner" />
-          <div class="cert-info">
-            <h4>AWS Certified Cloud Practitioner</h4>
-            <p>Amazon Web Services &nbsp;·&nbsp; Issued Mar 2023</p>
-            <a href="https://www.credly.com/users/irenecho" target="_blank">View credential</a>
-          </div>
-        </div>
+<div class="cert-card">
+<img class="cert-logo"
+src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+alt="AWS Cloud Practitioner" />
+<div class="cert-info">
+<h4>AWS Certified Cloud Practitioner</h4>
+<p>Amazon Web Services &nbsp;·&nbsp; Issued Mar 2023</p>
+<a href="https://www.credly.com/users/irenecho" target="_blank">View credential</a>
+</div>
+</div>
 
-        <div class="cert-card">
-          <img class="cert-logo"
-            src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de57f54a0cf3/image.png"
-            alt="AWS AI Practitioner" />
-          <div class="cert-info">
-            <h4>AWS AI Practitioner</h4>
-            <p>Amazon Web Services</p>
-            <span class="cert-pending">Expected August 2026</span>
-          </div>
-        </div>
+<div class="cert-card">
+<img class="cert-logo"
+src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de57f54a0cf3/image.png"
+alt="AWS AI Practitioner" />
+<div class="cert-info">
+<h4>AWS AI Practitioner</h4>
+<p>Amazon Web Services</p>
+<span class="cert-pending">Expected August 2026</span>
+</div>
+</div>
 
-        <div class="cert-card">
-          <img class="cert-logo"
-            src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
-            alt="AWS Solutions Architect Associate" />
-          <div class="cert-info">
-            <h4>AWS Solutions Architect Associate</h4>
-            <p>Amazon Web Services</p>
-            <span class="cert-pending">Expected August 2026</span>
-          </div>
-        </div>
+<div class="cert-card">
+<img class="cert-logo"
+src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+alt="AWS Solutions Architect Associate" />
+<div class="cert-info">
+<h4>AWS Solutions Architect Associate</h4>
+<p>Amazon Web Services</p>
+<span class="cert-pending">Expected August 2026</span>
+</div>
+</div>
 
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 
-  <footer>
-    Designed &amp; Built by <a href="https://www.linkedin.com/in/irene-b-c">Irene Cho</a>
-    &nbsp;·&nbsp;
-    <a href="https://github.com/IRBCHO">GitHub</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.credly.com/users/irenecho">Credly</a>
-  </footer>
+<footer>
+Designed &amp; Built by <a href="https://www.linkedin.com/in/irene-b-c">Irene Cho</a>
+&nbsp;·&nbsp;
+<a href="https://github.com/IRBCHO">GitHub</a>
+&nbsp;·&nbsp;
+<a href="https://www.credly.com/users/irenecho">Credly</a>
+</footer>
 
 </body>
 </html>
